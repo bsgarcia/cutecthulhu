@@ -1,0 +1,145 @@
+.img-left-card {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+main {
+    margin-top: 10% !important;
+    background-color: whitesmoke;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: whitesmoke;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+    font-family: 'Short Stack', cursive;
+    background-color: #7fd5ff87;
+}
+
+.header {
+    width: 60% ;
+    margin: auto;
+    background: border-box;
+}
+
+.logo-header {
+    width: 55px;
+    margin-left: 2%;
+}
+
+main {
+    background: border-box !important;
+}
+
+nav {
+    /*position: fixed;*/
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: x-large;
+    height: 10%;
+    /* border: 1px solid ; */
+    border-radius: .3em !important;
+    /* box-shadow: 1px 1px 1px 1px #4d4a4a; */
+    /* add blur effect to the box shadow */
+    box-shadow: 1px 1px 1px 1px #4d4a4a, 0 0 2px 2px #4d4a4a; 
+}
+
+#nav-links {
+    width: 80%;
+    margin-left: 5%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1c1c1c;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding-top: 3em;
+    /* Ensure content isn't hidden under the fixed navbar */
+}
+
+section {
+    padding: 2em;
+}
+
+
+
+@keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.border-text {
+    position: absolute;
+    left: 50%;
+    transform-origin: 0px 300px;
+    transform-style: flat;
+    /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
+    text-transform: uppercase;
+    font-weight: 900;
+    /* use a color gradient from blue to green  for the text */
+    color: linear-gradient(90deg, #00f, #0f0);
+    font-weight: bolder;
+    /* make the text transparent */
+}
+
+/*# sourceMappingURL=index.css.map */
+.container {
+    margin:auto;
+    width: 50%;
+    height: 50%;
+    font-size: xx-large ;
+    margin-top: 6%;
+    margin-bottom: -30%;
+}
+
+p.rotating {
+    height: 600px;
+    width: 600px;
+    /* position: absolute; */
+    animation: effect 20s linear infinite;
+    /* z-index: 99999;  */
+    margin: auto;
+}
+
+.pirate {
+    width: 56%;
+    border-radius: 50%;
+    /* position: absolute; */
+    transform-origin: 0 300px;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, darkblue, rgba(52, 175, 68, 0.712)) border-box;
+border-radius: 50em;
+border: 30px solid transparent;
+    margin: auto;
+    /* top: -460px; */
+    /* left:220px; */
+    top: -560px;
+  left: 207px;
+}

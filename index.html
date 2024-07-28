@@ -30,11 +30,11 @@
     </style>
 </head>
 
-<body>
+<body class="">
     <div class="header">
     <nav>
 
-        <img src="cc.webp" class="logo-header">
+        <img src="wheel.png" class="logo-header">
         <div id="nav-links">
             <ul>
                 <li><a href="#tokenomics">Tokenomics</a></li>
@@ -164,13 +164,13 @@
     window.onload = function () {
         for (let i = 0; i < str.length; i++) {
             // timeout to make the animation visible
-            setTimeout(() => {
+            <!-- setTimeout(() => { -->
                 let span = document.createElement('span');
                 span.classList.add('border-text');
                 span.innerHTML = str[i]
                 text.appendChild(span);
                 span.style.transform = `rotate(${11 * i}deg)`;
-            }, 300);
+            <!-- }, 50); -->
         }
     }
 </script>

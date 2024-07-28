@@ -7,6 +7,39 @@
 }
 
 
+.halftone {
+	--mask: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
+	--stop1: 3%;
+	--stop2: 90%;
+	
+	aspect-ratio: 1;
+	position: relative;
+	background: white;
+	filter: contrast(50);
+}
+
+.halftone::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(circle at center, black var(--stop1), transparent var(--stop2));
+	background-size: 1rem 1rem;
+	background-repeat: round;
+	background-position: center;
+	border: 4px solid;
+    mask-image: var(--mask);
+}
+
+.halftone:nth-child(even)::after {
+	--bgSize: 1.4rem;
+	--bgPosition: calc(var(--bgSize) / 2);
+	--stop1: 3%;
+	--stop2: 65%;
+	
+	background-image: radial-gradient(circle at center, black var(--stop1), transparent var(--stop2)), radial-gradient(circle at center, black var(--stop1), transparent var(--stop2));
+	background-size: var(--bgSize) var(--bgSize);
+	background-position: 0 0, var(--bgPosition) var(--bgPosition);
+}
 
 main {
     margin-top: 10% !important;
@@ -21,7 +54,8 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 body {
-    font-family: 'Short Stack', cursive;
+    /* font-family: 'Short Stack', cursive; */
+    font-family: 'Roboto Slab' cursive;
     background-color: #7fd5ff87;
 }
 
@@ -29,6 +63,11 @@ body {
     width: 60% ;
     margin: auto;
     background: border-box;
+    background-color: rgb(81, 81, 218);
+    /* background-color: whitesmoke; */
+    border-radius: .3em;
+    /* border: 2px solid black; */
+    border: 2px solid darkblue;
 }
 
 .logo-header {
@@ -38,6 +77,13 @@ body {
 
 main {
     background: border-box !important;
+
+}
+
+article {
+    background-color: whitesmoke !important;
+    box-shadow: inset 5px 5px rgba(255, 255, 255, .2), 5px 5px rgba(0, 0, 0, .08) !important;
+    
 }
 
 nav {
@@ -51,7 +97,9 @@ nav {
     border-radius: .3em !important;
     /* box-shadow: 1px 1px 1px 1px #4d4a4a; */
     /* add blur effect to the box shadow */
-    box-shadow: 1px 1px 1px 1px #4d4a4a, 0 0 2px 2px #4d4a4a; 
+    /* box-shadow: 1px 1px 1px 1px #4d4a4a, 0 0 2px 2px #4d4a4a;  */
+    box-shadow: inset 5px 5px rgba(255, 255, 255, .2), 5px 5px rgba(0, 0, 0, .08);
+
 }
 
 #nav-links {
@@ -69,8 +117,9 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #1c1c1c;
+    /* color: #1c1c1c; */
     font-weight: bold;
+    color:whitesmoke !important;
 }
 
 body {
@@ -104,8 +153,10 @@ section {
     text-transform: uppercase;
     font-weight: 900;
     /* use a color gradient from blue to green  for the text */
-    color: linear-gradient(90deg, #00f, #0f0);
+    /*color: linear-gradient(90deg, #00f, #0f0);*/
+
     font-weight: bolder;
+    padding: 18px;
     /* make the text transparent */
 }
 
@@ -124,22 +175,26 @@ p.rotating {
     width: 600px;
     /* position: absolute; */
     animation: effect 20s linear infinite;
+    border: 5px solid darkblue;
+    background-color: whitesmoke;
+    border-radius: 50em;
+    color: darkblue;
     /* z-index: 99999;  */
     margin: auto;
 }
 
 .pirate {
-    width: 56%;
+    width: 52%;
     border-radius: 50%;
     /* position: absolute; */
     transform-origin: 0 300px;
-    background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, darkblue, rgba(52, 175, 68, 0.712)) border-box;
-border-radius: 50em;
-border: 30px solid transparent;
+    /*background: linear-gradient(white, white) padding-box,*/
+    /*linear-gradient(to right, darkblue, rgba(52, 175, 68, 0.712)) border-box;*/
+    border-radius: 50em;
+    border: 5px solid darkblue;
     margin: auto;
     /* top: -460px; */
     /* left:220px; */
-    top: -560px;
-  left: 207px;
+    top: -545px;
+    left: 230px;
 }
